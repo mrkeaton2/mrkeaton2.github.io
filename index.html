@@ -277,7 +277,7 @@
       <!-- Your image here -->
       <img src="static/images/Contrastive_Flow_Loss_v3.png" alt="Contrastive Flow Loss" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        Contrastive Flow Loss. For each masked pixel (corresponding to a cell) in the target sample, we identify a location from the source sample which possesses an gradient flow vector with the highest cosine similarity, and utilize a hard-mining strategy to select multiple negative samples. Similarly to the Mask-base Contrastive Loss, we utilize a loss function that aligns the target sample representation with that of the positive source sample while moving away from each negative sample.
+        Contrastive Flow Loss. For each masked pixel (corresponding to a cell) in the target sample, we identify a location from the source sample which possesses an gradient flow vector with the highest cosine similarity, and utilize a hard-mining strategy to select multiple negative samples roughly a fixed cosine distance away from the target label. Similarly to the Mask-base Contrastive Loss, we utilize a loss function that aligns the target sample representation with that of the positive source sample while moving away from each negative sample.
       </h2>
     </div>
   </div>
