@@ -240,7 +240,7 @@
     <div class="hero-body">
       <img src="static/images/Qualitative_BBBC006.png" alt="Qualitative segmentation results">
       <h2 class="subtitle has-text-centered">
-        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
+        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells, and outperforms the generalist baseline regardless of different features of the data. In this case, z corresponds to the imaging plane, where z=16 is in focus.
       </h2>
     </div>
   </div>
@@ -250,13 +250,13 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <h2 class="title is-3 has-text-centered">CellTranspose prediction and adaptation overview</h2>
     <div class="container">
+      <h2 class="title is-3 has-text-centered">CellTranspose prediction and adaptation overview</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <img src="static/images/prediction_process_v3.png" alt="CellTranspose prediction process" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Prediction process. Similar to Cellpose, our approach generates a per-pixel cell prediction mask as well as x-y flows pointing to the direction to the center of the cell, which enables individual cell instances to be predicted.
+          Prediction process. Similar to Cellpose, our approach generates a per-pixel cell prediction mask as well as x-y gradient flows pointing to the direction to the center of the cell, which enables individual cell instances to be predicted.
         </h2>
       </div>
       <div class="item">
@@ -277,7 +277,7 @@
       <!-- Your image here -->
       <img src="static/images/Contrastive_Flow_Loss_v3.png" alt="Contrastive Flow Loss" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        Contrastive Flow Loss. For each masked pixel (corresponding to a cell) in the target sample, we identify a location from the source sample which possesses an x-y flow vector with the highest cosine similarity, and utilize a hard-mining strategy to select multiple negative samples. Similarly to the Mask-base Contrastive Loss, we utilize a loss function that aligns the target sample representation with that of the positive source sample while moving away from each negative sample.
+        Contrastive Flow Loss. For each masked pixel (corresponding to a cell) in the target sample, we identify a location from the source sample which possesses an gradient flow vector with the highest cosine similarity, and utilize a hard-mining strategy to select multiple negative samples. Similarly to the Mask-base Contrastive Loss, we utilize a loss function that aligns the target sample representation with that of the positive source sample while moving away from each negative sample.
       </h2>
     </div>
   </div>
@@ -288,8 +288,8 @@
 
 <!-- TissueNet results -->
 <section class="hero teaser">
-  <h2 class="title is-3 has-text-centered">Comparative results with generalist approaches</h2>
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Comparative results with generalist approaches</h2>
     <div class="hero-body">
       <img src="static/images/TissueNet Results.png" alt="TissueNet results">
       <h2 class="subtitle has-text-centered">
@@ -302,8 +302,8 @@
 
 <!-- TNBC results -->
 <section class="hero teaser">
-  <h2 class="title is-3 has-text-centered">Comparative results with unsupervised method</h2>
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Comparative results with unsupervised method</h2>
     <div class="hero-body">
       <img src="static/images/TNBC Results.png" alt="TNBC results">
       <h2 class="subtitle has-text-centered">
