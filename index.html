@@ -171,7 +171,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="CellTranspose: Few-shot Domain Adaptation for Cellular Instance Segmentation">age</h1>
+            <h1 class="title is-1 publication-title">CellTranspose: Few-shot Domain Adaptation for Cellular Instance Segmentation</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://www.linkedin.com/in/matthew-keaton/" target="_blank">Matthew R Keaton</a>,</span>
@@ -224,7 +224,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-                  Automated cellular instance segmentation is a process utilized for accelerating biological research for the past two decades, and recent advancements have produced higher quality results with less eort from the biologist. Most current endeavors focus on completely cutting the researcher out of the picture by generating highly generalized models. However, these models invariably fail when faced with novel data, distributed differently than the ones used for training. Rather than approaching the problem with methods that presume the availability of large amounts of target data and computing power for retraining, in this work we address the even greater challenge of designing an approach that requires minimal amounts of new annotated data as well as training time. We do so by designing specialized contrastive losses that leverage the few annotated samples very eciently. A large set of results show that 3 to 5 annotations lead to models with accuracy that: 1) significantly mitigate the covariate shift eects; 2) matches or surpasses other adaptation methods; 3) even approaches methods that have been fully retrained on the target distribution. The adaptation training is only a few minutes, paving a path towards a balance between model performance, computing requirements and expert-level annotation needs.
+                  Automated cellular instance segmentation is a process utilized for accelerating biological research for the past two decades, and recent advancements have produced higher quality results with less effort from the biologist. Most current endeavors focus on completely cutting the researcher out of the picture by generating highly generalized models. However, these models invariably fail when faced with novel data, distributed differently than the ones used for training. In this work, rather than approaching the problem with methods that presume the availability of large amounts of target data and computing power for retraining, we address the even greater challenge of designing an approach that requires minimal amounts of new annotated data as well as training time. We do so by designing specialized contrastive losses that leverage the few annotated samples very efficiently. A large set of results show that 3 to 5 annotations lead to models with accuracy that: 1) significantly mitigate the covariate shift effects; 2) matches or surpasses other adaptation methods; 3) even approaches the performance of methods that have been fully retrained on the target distribution. The adaptation training is only a few minutes, paving a path towards a balance between model performance, computing requirements and expert-level annotation needs.
           </p>
         </div>
       </div>
@@ -235,9 +235,10 @@
 
 <!-- Qualitative results -->
 <section class="hero teaser">
+  <h2 class="title is-3 has-text-centered">Qualitative results</h2>
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/Qualitative_BBBC006.png" alt="SiamABC">
+      <img src="static/images/Qualitative_BBBC006.png" alt="Qualitative segmentation results">
       <h2 class="subtitle has-text-centered">
         CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
       </h2>
@@ -249,6 +250,7 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
+    <h2 class="title is-3 has-text-centered">CellTranspose prediction and adaptation overview</h2>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
@@ -286,11 +288,12 @@
 
 <!-- TissueNet results -->
 <section class="hero teaser">
+  <h2 class="title is-3 has-text-centered">Comparative results with generalist approaches</h2>
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/TissueNet Results.png" alt="TissueNet results">
       <h2 class="subtitle has-text-centered">
-        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
+        CellTranspose is able to adapt to a number of imaging and tissue types, in some cases significantly outperforming the "generalist" Cellpose baseline as well as another generalist approach published with the TissueNet dataset. With only 3 target samples, CellTranspose in most cases even approaches the upper bound defined by training the original Cellpose model directly on each individual subtype.
       </h2>
     </div>
   </div>
@@ -299,29 +302,17 @@
 
 <!-- TNBC results -->
 <section class="hero teaser">
+  <h2 class="title is-3 has-text-centered">Comparative results with unsupervised method</h2>
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/TNBC Results.png" alt="TNBC results">
       <h2 class="subtitle has-text-centered">
-        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
+        We also compare our approach to unsupervised methods, which aim to utilize the entire target dataset without any labels. A clear comparison is difficult, as factors including the size of the target dataset and amount of data variability have different impacts on either approach. In this case, more samples are required to perform as well as the unsupervised method, which may in part be due to the fact that the target training data and test data come from different tissue types.
       </h2>
     </div>
   </div>
 </section>
 <!-- End TNBC results -->
-
-<!-- 3-D results -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/3-D Results.png" alt="3-D results">
-      <h2 class="subtitle has-text-centered">
-        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End 3-D results -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
