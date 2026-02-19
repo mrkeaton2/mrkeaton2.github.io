@@ -74,8 +74,8 @@
   <title>CellTranspose: Few-shot Domain Adaptation for Cellular Instance Segmentation - Matthew R Keaton, Ram J Zaveri, Gianfranco Doretto | Academic Research</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/" href="static/images/vl_logo_100x100.png">
+  <!-- <link rel="apple-touch-icon" href="static/images/favicon.ico"> -->
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -329,6 +329,18 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Qualitative results -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/Qualitative_BBBC006.png" alt="SiamABC">
+      <h2 class="subtitle has-text-centered">
+        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End qualitative results -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
@@ -337,31 +349,31 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <img src="static/images/prediction_process_v3.jpg" alt="CellTranspose prediction process" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Prediction process. Similar to Cellpose, our approach generates a per-pixel cell prediction mask as well as x-y flows pointing to the direction to the center of the cell, which enables individual cell instances to be predicted.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/adaptation_process_v2.jpg" alt="CellTranspose adaptation process" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Adaptation process. Using source-target domain sample pairs, predictions are updated utilizing specialized contrastive losses for both the mask and flow predictions
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/Mask-based_Contrastive_Loss.jpg" alt="Mask-based Contrastive Loss" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          Mask-based Contrastive Loss. On a per-pixel basis, the model prediction is updated to ensure predictions from the target samples are representationally aligned to source samples when belonging to the same class (cell/non-cell), and otherwise distant from each other.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+      <img src="static/images/Mask-based_Contrastive_Loss.jpg" alt="Contrastive Flow Loss" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Contrastive Flow Loss. For each masked pixel (corresponding to a cell) in the target sample, we identify a location from the source sample which possesses an x-y flow vector with the highest cosine similarity, and utilize a hard-mining strategy to select multiple negative samples. Similarly to the Mask-base Contrastive Loss, we utilize a loss function that aligns the target sample representation with that of the positive source sample while moving away from each negative sample.
       </h2>
     </div>
   </div>
@@ -370,46 +382,44 @@
 </section>
 <!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Presentation from WACV</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/watch?v=_l37Qb5z_W8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
+<!-- TissueNet results -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/TissueNet Results.png" alt="SiamABC">
+      <h2 class="subtitle has-text-centered">
+        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
+      </h2>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End TissueNet results -->
 
-<!---->
-<!-- <!-- Paper poster --> -->
-<!-- <section class="hero is-small is-light"> -->
-<!--   <div class="hero-body"> -->
-<!--     <div class="container"> -->
-<!--       <h2 class="title">Poster</h2> -->
-<!---->
-<!--       <!-- TODO: Replace with your poster PDF --> -->
-<!--       <iframe  src="static/pdfs/sample.pdf" width="100%" height="550"> -->
-<!--           </iframe> -->
-<!--          -->
-<!--       </div> -->
-<!--     </div> -->
-<!--   </section> -->
-<!-- <!--End paper poster --> -->
-<!---->
+<!-- TNBC results -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/TNBC Results.png" alt="SiamABC">
+      <h2 class="subtitle has-text-centered">
+        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End TNBC results -->
 
+<!-- 3-D results -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/3-D Results.png" alt="SiamABC">
+      <h2 class="subtitle has-text-centered">
+        CellTranspose is able to reliably adapt to unseen data with as few as 3 labeled cells.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End 3-D results -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
